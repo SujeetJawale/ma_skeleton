@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: TeluskoApp1
+
+#    eureka
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:4141/
+
+server:
+  port: 8484
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
+
