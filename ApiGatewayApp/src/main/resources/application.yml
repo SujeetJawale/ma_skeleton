@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ApiGatewayApp
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+        - id: sujeet1
+          uri: lb://TELUSKOAPP1
+          predicates:
+            - Path=/info
+        - id: sujeet2
+          uri: lb://TELUSKOAPP2
+          predicates:
+            - Path=/moreinfo
+
+server:
+  port: 4444
